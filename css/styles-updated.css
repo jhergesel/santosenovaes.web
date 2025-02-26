@@ -1,0 +1,283 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #F2D16D; /* Text color */
+    background-color: #262626; /* Dark background */
+}
+
+/* Header */
+header {
+    background: #000000; /* Black header */
+    box-shadow: 0 2px 4px rgba(242,209,109,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #8C6D32; /* Add bottom border */
+}
+
+nav.navbar.sticky {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000000; /* Black background */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Align logo vertically */
+}
+
+.logo img {
+    max-height: 60px; /* Ensure logo height */
+    margin-right: 1rem; /* Add space between logo and menu */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    background: #000000; /* Black background */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #F2D16D; /* Gold text */
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+}
+
+.menu a:hover {
+    color: #D9A23D; /* Lighter gold on hover */
+    background: rgba(242,209,109,0.1); /* Light gold background on hover */
+}
+
+/* Hero Section */
+#hero {
+    background: #000000; /* Black hero background */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #F2D16D; /* Gold text */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #D9A23D; /* Gold button */
+    color: #010326; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #8C6D32; /* Darker gold on hover */
+    color: #F2D16D; /* Gold text */
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Grid Layouts */
+.servicos-grid, .equipe-grid, .areas-grid, .advogados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Cards */
+.area-card, .advogado-card {
+    background: #262626; /* Dark card background */
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(242,209,109,0.1);
+    color: #F2D16D; /* Gold text */
+    transition: transform 0.3s;
+}
+
+.area-card:hover, .advogado-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap for more spacing between input and button */
+}
+
+button {
+    padding: 1.2rem; /* Increased padding for better button size */
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 1rem;
+    background: #D9A23D; /* Gold button */
+    color: #010326; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #8C6D32; /* Darker gold on hover */
+    color: #F2D16D; /* Gold text */
+}
+
+/* Footer */
+footer {
+    position: relative; /* Change to relative */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000; /* Black footer */
+    color: #F2D16D; /* Gold text */
+    text-align: center;
+    padding: 1rem; /* Adjust padding as needed */
+    border-top: 1px solid #8C6D32; /* Darker gold border */
+}
+
+main {
+    padding-bottom: 80px; /* Add padding to prevent overlap with footer */
+}
+
+.admin-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.admin-btn:hover {
+    opacity: 1;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: #262626; /* Dark background */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(242,209,109,0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #F2D16D; /* Gold text */
+}
+
+.login-container input {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Menu Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Admin Panel */
+.admin-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.admin-card {
+    display: block;
+    padding: 2rem;
+    background: #262626; /* Dark card background */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(242,209,109,0.1);
+    text-align: center;
+    text-decoration: none;
+    color: #F2D16D; /* Gold text */
+    transition: transform 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Golden Icon Style */
+.gold-icon {
+filter: brightness(2) contrast(1.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    #hero {
+        height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}

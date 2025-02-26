@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Pessoal - Santos & Novaes</title>
+    <link rel="stylesheet" href="../css/styles-updated.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive-styles.css">
+    <style>
+        /* Sidebar styles */
+        .sidebar {
+            width: 60px; /* Initially show only icons */
+            height: 100%;
+            background-color: #f4f4f4;
+            position: fixed;
+            transition: width 0.3s;
+            overflow: hidden;
+        }
+        .sidebar:hover {
+            width: 250px; /* Expand on hover */
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .sidebar a span {
+            display: none; /* Hide text initially */
+        }
+        .sidebar:hover a span {
+            display: inline; /* Show text on hover */
+        }
+        .content {
+            margin-left: 70px; /* Space for sidebar */
+            padding: 20px;
+            padding-bottom: 60px; /* Space for footer */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Logo Santos & Novaes">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="areas-atuacao.html">Áreas de Atuação</a></li>
+                <li><a href="advogados.html">Advogados</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        // Load the header content
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('header').innerHTML = data;
+            });
+    </script>
+    <div class="sidebar">
+        <img src="../assets/burger-bar.png" alt="Menu Icon" style="width: 40px; height: 40px; margin: 10px;">
+        <a href="#processos">
+            <img src="../assets/auction.png" alt="Processos">
+            <span>Processos</span>
+        </a>
+        <a href="#agenda">
+            <img src="../assets/schedule.png" alt="Agenda">
+            <span>Agenda</span>
+        </a>
+        <a href="#chat">
+            <img src="../assets/chat.png" alt="Chat">
+            <span>Chat</span>
+        </a>
+        <a href="#documentos">
+            <img src="../assets/document.png" alt="Documentos">
+            <span>Documentos</span>
+        </a>
+        <a href="#assinar">
+            <img src="../assets/contract.png" alt="Assinar">
+            <span>Assinar</span>
+        </a>
+    </div>
+    <div class="content">
+        <h1>Bem-vindo à sua página pessoal!</h1>
+        <p>Aqui você pode gerenciar seus processos, agenda, chat e documentos.</p>
+    </div>
+    <footer>
+        <p>&copy; 2023 Santos & Novaes. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

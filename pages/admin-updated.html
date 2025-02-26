@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Santos & Novaes</title>
+    <link rel="stylesheet" href="../css/styles-updated.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Logo Santos & Novaes">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="areas-atuacao.html">Áreas de Atuação</a></li>
+                <li><a href="advogados.html">Advogados</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="login-container">
+        <h2>Login Administrativo</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <div class="dashboard" style="display:none;">
+        <h2>Painel Administrativo</h2>
+        
+        <section id="newsletter">
+            <h3>Gerenciar Newsletter</h3>
+            <form id="newsletterForm">
+                <textarea id="newsletterContent" placeholder="Digite o conteúdo da newsletter" required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <section id="createBlogPost">
+            <h3>Criar Postagem no Blog</h3>
+            <form id="blogPostForm">
+                <input type="text" id="blogTitle" placeholder="Título do Post" required>
+                <textarea id="blogContent" placeholder="Conteúdo do Post" required></textarea>
+                <label for="blogImage">Imagem do Post:</label>
+                <input type="file" id="blogImage" accept="image/*">
+                <label for="blogFile">Arquivo para Download:</label>
+                <input type="file" id="blogFile" accept=".jpg,.png,.pdf,.docx,.xlsx">
+                <button type="submit">Publicar Post</button>
+            </form>
+        </section>
+
+        <section id="editTexts">
+            <h3>Editar Textos</h3>
+            <form id="editQuemSomos">
+                <h4>Quem Somos</h4>
+                <textarea id="quemSomosContent" placeholder="Conteúdo de Quem Somos" required></textarea>
+                <button type="submit">Salvar</button>
+            </form>
+            <form id="editAreasAtuacao">
+                <h4>Áreas de Atuação</h4>
+                <textarea id="areasAtuacaoContent" placeholder="Conteúdo de Áreas de Atuação" required></textarea>
+                <button type="submit">Salvar</button>
+            </form>
+            <form id="editAdvogados">
+                <h4>Advogados</h4>
+                <textarea id="advogadosContent" placeholder="Conteúdo de Advogados" required></textarea>
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+
+        <section id="uploadImages">
+            <h3>Alterar Imagens</h3>
+            <form id="uploadImageForm">
+                <label for="imageQuemSomos">Imagem Quem Somos:</label>
+                <input type="file" id="imageQuemSomos" accept="image/*" required>
+                <label for="imageAreasAtuacao">Imagem Áreas de Atuação:</label>
+                <input type="file" id="imageAreasAtuacao" accept="image/*" required>
+                <label for="imageAdvogados">Imagem Advogados:</label>
+                <input type="file" id="imageAdvogados" accept="image/*" required>
+                <button type="submit">Carregar Imagens</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

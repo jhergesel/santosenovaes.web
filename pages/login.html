@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Santos & Novaes</title>
+    <link rel="stylesheet" href="../css/styles-updated.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Logo Santos & Novaes">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="areas-atuacao.html">Áreas de Atuação</a></li>
+                <li><a href="advogados.html">Advogados</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        // Load the header content
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('header').innerHTML = data;
+            });
+    </script>
+    <main>
+        <form id="loginForm" onsubmit="redirectToDashboard(event)">
+            <input type="text" id="identifier" placeholder="CPF, E-mail ou Telefone" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <p>Não tem uma conta? <a href="create-account.html">Criar conta</a></p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Santos & Novaes. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
